@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kur Marjı ve Kotasyon Hesaplamaları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .calculation-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .formula {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Kur Marjı ve Kotasyon Hesaplamaları</h1>
+
+    <div class="question">
+        <h3>Soru 1: Kur Marjı Hesaplama</h3>
+        <p>Bir bankanın EUR/TL kurları aşağıdaki gibidir:</p>
+        <table>
+            <tr>
+                <th>Döviz</th>
+                <th>Alış</th>
+                <th>Satış</th>
+            </tr>
+            <tr>
+                <td>EUR</td>
+                <td>31.20</td>
+                <td>31.80</td>
+            </tr>
+        </table>
+        <p>Bu bankanın EUR için uyguladığı kur marjını yüzde olarak hesaplayınız.</p>
+        <button class="show-answer" onclick="toggleAnswer(1)">Çözümü Göster</button>
+        <div class="answer" id="answer1">
+            <div class="formula">Formül: Kur Marjı (%) = (Satış Kuru - Alış Kuru) / Alış Kuru × 100</div>
+            <div class="calculation-box">
+                Kur Marjı = (31.80 - 31.20) / 31.20 × 100<br>
+                Kur Marjı = 0.60 / 31.20 × 100<br>
+                Kur Marjı = 0.01923 × 100<br>
+                <strong>Kur Marjı = %1.92</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2: Çapraz Kur Hesaplama</h3>
+        <p>Aşağıdaki kurlar verilmiştir:</p>
+        <table>
+            <tr>
+                <th>Kur</th>
+                <th>Değer</th>
+            </tr>
+            <tr>
+                <td>USD/TL</td>
+                <td>29.50</td>
+            </tr>
+            <tr>
+                <td>EUR/TL</td>
+                <td>31.80</td>
+            </tr>
+        </table>
+        <p>EUR/USD çapraz kurunu hesaplayınız.</p>
+        <button class="show-answer" onclick="toggleAnswer(2)">Çözümü Göster</button>
+        <div class="answer" id="answer2">
+            <div class="formula">Formül: EUR/USD = EUR/TL ÷ USD/TL</div>
+            <div class="calculation-box">
+                EUR/USD = 31.80 ÷ 29.50<br>
+                <strong>EUR/USD = 1.0780</strong><br><br>
+                Yani 1 EUR = 1.0780 USD
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3: Kotasyon Dönüşümü</h3>
+        <p>Avrupa kotasyonunda USD/TL = 29.75 olarak verilmiştir. Bu kuru Amerika kotasyonuna çeviriniz.</p>
+        <button class="show-answer" onclick="toggleAnswer(3)">Çözümü Göster</button>
+        <div class="answer" id="answer3">
+            <div class="formula">
+                Avrupa Kotasyonu: 1 USD = 29.75 TL<br>
+                Amerika Kotasyonu: 1 TL = X USD<br>
+                Formül: Amerika Kotasyonu = 1 / Avrupa Kotasyonu
+            </div>
+            <div class="calculation-box">
+                TL/USD = 1 / 29.75<br>
+                TL/USD = 0.0336<br>
+                <strong>1 TL = 0.0336 USD</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4: Arbitraj Karı Hesaplama</h3>
+        <p>İki farklı bankada aşağıdaki kurlar verilmiştir:</p>
+        <table>
+            <tr>
+                <th>Banka</th>
+                <th>USD Alış</th>
+                <th>USD Satış</th>
+            </tr>
+            <tr>
+                <td>A Bankası</td>
+                <td>29.40</td>
+                <td>29.50</td>
+            </tr>
+            <tr>
+                <td>B Bankası</td>
+                <td>29.55</td>
+                <td>29.65</td>
+            </tr>
+        </table>
+        <p>1000 USD ile arbitraj yapılırsa ne kadar kar elde edilir?</p>
+        <button class="show-answer" onclick="toggleAnswer(4)">Çözümü Göster</button>
+        <div class="answer" id="answer4">
+            <div class="calculation-box">
+                1. A Bankasından 1000 USD satın al: 1000 × 29.50 = 29,500 TL öde<br>
+                2. B Bankasına 1000 USD sat: 1000 × 29.55 = 29,550 TL al<br>
+                <strong>Arbitraj Karı = 29,550 - 29,500 = 50 TL</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5: Devalüasyon Etkisi</h3>
+        <p>Bir ülkenin para birimi %20 devalüe edilmiştir. Devalüasyon öncesi 1 USD = 25 TL ise, devalüasyon sonrası kur ne olur?</p>
+        <button class="show-answer" onclick="toggleAnswer(5)">Çözümü Göster</button>
+        <div class="answer" id="answer5">
+            <div class="formula">Devalüasyon: Ulusal paranın değer kaybetmesi</div>
+            <div class="calculation-box">
+                %20 devalüasyon = TL'nin %20 değer kaybı<br>
+                Yeni kur = Eski kur × (1 + Devalüasyon oranı)<br>
+                Yeni kur = 25 × (1 + 0.20)<br>
+                Yeni kur = 25 × 1.20<br>
+                <strong>Yeni kur: 1 USD = 30 TL</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6: Bid-Ask Spread Hesaplama</h3>
+        <p>Bir forex işlemcisi EUR/USD kuru için şu fiyatları vermektedir:</p>
+        <p>Bid (Alış): 1.0750<br>Ask (Satış): 1.0755</p>
+        <p>Spread'i pip ve yüzde olarak hesaplayınız.</p>
+        <button class="show-answer" onclick="toggleAnswer(6)">Çözümü Göster</button>
+        <div class="answer" id="answer6">
+            <div class="calculation-box">
+                <strong>Pip olarak:</strong><br>
+                Spread = Ask - Bid = 1.0755 - 1.0750 = 0.0005<br>
+                1 pip = 0.0001 için<br>
+                Spread = 0.0005 / 0.0001 = <strong>5 pip</strong><br><br>
+                
+                <strong>Yüzde olarak:</strong><br>
+                Spread (%) = (Ask - Bid) / Bid × 100<br>
+                Spread (%) = (1.0755 - 1.0750) / 1.0750 × 100<br>
+                Spread (%) = 0.0005 / 1.0750 × 100<br>
+                Spread (%) = <strong>%0.0465</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 7: Forward Kur Hesaplama</h3>
+        <p>Spot USD/TL kuru: 29.50<br>
+        TL yıllık faiz oranı: %18<br>
+        USD yıllık faiz oranı: %5<br>
+        3 aylık forward kuru hesaplayınız.</p>
+        <button class="show-answer" onclick="toggleAnswer(7)">Çözümü Göster</button>
+        <div class="answer" id="answer7">
+            <div class="formula">Faiz Paritesi Teorisi Formülü:<br>Forward Kur = Spot Kur × [ (1 + Değişken Kurun Faizi × (n/360)) / (1 + Sabit Kurun Faizi × (n/360)) ]</div>
+            <div class="calculation-box">
+                Bu formül, iki para biriminin faiz oranları arasındaki farka göre gelecekteki kurun ne olması gerektiğini (arbitraj olmaması için) hesaplar.<br>
+                Süre (n) = 3 ay ≈ 90 gün<br><br>
+                Forward = 29.50 × [ (1 + 0.18 × (90/360)) / (1 + 0.05 × (90/360)) ]<br>
+                Forward = 29.50 × [ (1 + 0.18 × 0.25) / (1 + 0.05 × 0.25) ]<br>
+                Forward = 29.50 × [ (1 + 0.045) / (1 + 0.0125) ]<br>
+                Forward = 29.50 × (1.045 / 1.0125)<br>
+                Forward = 29.50 × 1.03210...<br>
+                <strong>3 aylık forward kur ≈ 30.45 TL</strong>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otonom ve Denkleştirici İşlemler - Çoktan Seçmeli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options li:hover {
+            background-color: #e0e0e0;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Otonom ve Denkleştirici İşlemler</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <p>Otonom işlemler nedir?</p>
+        <ul class="options">
+            <li>A) Ödemeler dengesini sağlamak için yapılan işlemler</li>
+            <li>B) Merkez bankasının müdahaleleri</li>
+            <li>C) Ödemeler dengesi dışındaki nedenlerle gerçekleşen işlemler</li>
+            <li>D) Sadece ithalat işlemleri</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevabı Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Otonom işlemler, ödemeler dengesi dışındaki nedenlerle (kar amacı, ticaret, yatırım vb.) gerçekleşen işlemlerdir. Bu işlemler ödemeler dengesini sağlamak amacıyla yapılmaz.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <p>Aşağıdakilerden hangisi denkleştirici işlemlere örnek verilebilir?</p>
+        <ul class="options">
+            <li>A) Turistik harcamalar</li>
+            <li>B) Doğrudan yabancı yatırımlar</li>
+            <li>C) Merkez bankasının döviz rezervlerini kullanması</li>
+            <li>D) İhracat gelirleri</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevabı Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Denkleştirici işlemler, ödemeler dengesindeki açık veya fazlaları gidermek amacıyla yapılan işlemlerdir. Merkez bankasının döviz rezervlerini kullanması tipik bir denkleştirici işlemdir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <p>Cari işlemler hesabında yer alan işlemler hangi kategoridedir?</p>
+        <ul class="options">
+            <li>A) Tamamen denkleştirici işlemler</li>
+            <li>B) Tamamen otonom işlemler</li>
+            <li>C) Hem otonom hem denkleştirici</li>
+            <li>D) Ne otonom ne denkleştirici</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevabı Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Cari işlemler hesabında yer alan mal ve hizmet ticareti, gelir transferleri gibi işlemler otonom işlemlerdir çünkü ödemeler dengesini düzeltmek amacıyla değil, ekonomik faaliyetlerin doğal sonucu olarak gerçekleşirler.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <p>IMF kredileri ödemeler bilançosunda nasıl sınıflandırılır?</p>
+        <ul class="options">
+            <li>A) Otonom işlem</li>
+            <li>B) Denkleştirici işlem</li>
+            <li>C) Cari işlem</li>
+            <li>D) Ticari işlem</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevabı Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: IMF kredileri, ödemeler dengesi açıklarını finanse etmek için alındığından denkleştirici işlem olarak sınıflandırılır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <p>Kısa vadeli sermaye hareketleri genellikle hangi kategoride değerlendirilir?</p>
+        <ul class="options">
+            <li>A) Her zaman otonom</li>
+            <li>B) Her zaman denkleştirici</li>
+            <li>C) Amacına göre otonom veya denkleştirici olabilir</li>
+            <li>D) Hiçbiri</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(5)">Cevabı Göster</button>
+        <div class="answer" id="answer5">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Kısa vadeli sermaye hareketleri, kar amacıyla yapılıyorsa otonom, ödemeler dengesi açığını kapatmak için yapılıyorsa denkleştirici işlem olarak sınıflandırılır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <p>Ödemeler bilançosunda "çizgi altı" işlemler hangileridir?</p>
+        <ul class="options">
+            <li>A) İhracat ve ithalat</li>
+            <li>B) Turizm gelirleri</li>
+            <li>C) Denkleştirici işlemler</li>
+            <li>D) Doğrudan yatırımlar</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(6)">Cevabı Göster</button>
+        <div class="answer" id="answer6">
+            <strong>Doğru Cevap: C</strong><br>
+            <strong>Açıklama:</strong> Ödemeler bilançosu analizinde, otonom işlemlerin toplamı bir denge verir. Bu dengeye "temel denge" veya "genel denge" denir. Bu dengenin altındaki işlemler, yani bu dengeyi finanse eden işlemler "çizgi altı" olarak adlandırılır. Bunlar, resmi rezerv hareketleri, IMF kredileri gibi denkleştirici işlemlerdir. "Çizgi üstü" işlemler ise otonom işlemlerdir.
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

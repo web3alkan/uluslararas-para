@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boşluk Doldurma Soruları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .blank {
+            display: inline-block;
+            min-width: 150px;
+            border-bottom: 2px solid #333;
+            margin: 0 5px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .fill-answer {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Boşluk Doldurma Soruları - Temel Kavramlar</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <p>Bretton Woods sisteminde sadece <span class="blank">________</span> altına bağlıydı, diğer ülkeler paralarını <span class="blank">________</span> bağlamıştır.</p>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevabı Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Cevap:</strong> <span class="fill-answer">ABD doları</span> - <span class="fill-answer">dolara</span><br><strong>Açıklama:</strong> 1944'te kurulan Bretton Woods sisteminde, ABD doları 35$/ons kurundan altına çevrilebilen tek para birimiydi. Diğer üye ülkeler ise kendi para birimlerinin değerini dolara karşı belirli bir parite üzerinden sabitliyorlardı. Bu, dolara 'rezerv para' statüsü kazandırmıştır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <p>SDR açılımı <span class="blank">________</span> olup, Türkçesi <span class="blank">________</span>'dır.</p>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevabı Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Cevap:</strong> <span class="fill-answer">Special Drawing Rights</span> - <span class="fill-answer">Özel Çekme Hakkı</span><br><strong>Açıklama:</strong> SDR, IMF tarafından 1969'da oluşturulan uluslararası bir rezerv varlığıdır. Amacı, Bretton Woods sistemindeki dolar ve altına dayalı likiditeyi desteklemektir. SDR, fiziki bir para birimi olmayıp, üye ülkelerin birbirlerinden para çekme hakkını temsil eden bir hesap birimidir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <p>Uluslararası likidite araçları: <span class="blank">________</span>, büyük sanayileşmiş ülke paraları (<span class="blank">________</span>), IMF kaynakları (SDR, döviz rezerv pozisyonu) ve <span class="blank">________</span>'dır.</p>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevabı Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Cevap:</strong> <span class="fill-answer">Dolar</span> - <span class="fill-answer">Euro</span> - <span class="fill-answer">Altın</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <p>Türkiye'nin günümüzde uyguladığı kur rejimi <span class="blank">________</span> sistemidir. Bu sistemde kur piyasanın işleyişine bırakılmıştır fakat <span class="blank">________</span> zaman zaman piyasaya müdahale eder.</p>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevabı Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Cevap:</strong> <span class="fill-answer">müdahaleli dalgalanma</span> - <span class="fill-answer">Merkez Bankası</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <p>Euro, <span class="blank">________</span> tarihinde kaydi-hesabi para birimi olarak uygulanmaya başlanmış, <span class="blank">________</span> tarihinde fiziki varlığa kavuşmuştur.</p>
+        <button class="show-answer" onclick="toggleAnswer(5)">Cevabı Göster</button>
+        <div class="answer" id="answer5">
+            <strong>Cevap:</strong> <span class="fill-answer">1 Ocak 1999</span> - <span class="fill-answer">1 Ocak 2002</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <p>IMF'ye üye her ülkeye belirlenen <span class="blank">________</span>, üyelerin IMF'ye yapacağı mali katkıları, IMF'nin yönetimindeki <span class="blank">________</span> ve yeni yaratılan <span class="blank">________</span> dağıtımını belirler.</p>
+        <button class="show-answer" onclick="toggleAnswer(6)">Cevabı Göster</button>
+        <div class="answer" id="answer6">
+            <strong>Cevap:</strong> <span class="fill-answer">kota</span> - <span class="fill-answer">ağırlıklarını (oylama gücü)</span> - <span class="fill-answer">SDR'lerin</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 7:</h3>
+        <p><span class="blank">________</span> kotasyonunda 1 yabancı para biriminin kaç yerli para ettiği gösterilirken, <span class="blank">________</span> kotasyonunda 1 yerli paranın kaç yabancı para ettiği gösterilir.</p>
+        <button class="show-answer" onclick="toggleAnswer(7)">Cevabı Göster</button>
+        <div class="answer" id="answer7">
+            <strong>Cevap:</strong> <span class="fill-answer">Avrupa</span> - <span class="fill-answer">Amerika</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 8:</h3>
+        <p>Ulusal paranın değer kaybetmesine <span class="blank">________</span>, değer kazanmasına ise <span class="blank">________</span> denir.</p>
+        <button class="show-answer" onclick="toggleAnswer(8)">Cevabı Göster</button>
+        <div class="answer" id="answer8">
+            <strong>Cevap:</strong> <span class="fill-answer">devalüasyon</span> - <span class="fill-answer">revalüasyon</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 9:</h3>
+        <p>Ödemeler dengesi dışındaki nedenlerle gerçekleşen işlemlere <span class="blank">________</span> işlemler, ödemeler dengesini düzeltmek için yapılan işlemlere ise <span class="blank">________</span> işlemler denir.</p>
+        <button class="show-answer" onclick="toggleAnswer(9)">Cevabı Göster</button>
+        <div class="answer" id="answer9">
+            <strong>Cevap:</strong> <span class="fill-answer">otonom</span> - <span class="fill-answer">denkleştirici</span>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 10:</h3>
+        <p>IMF sınıflandırmasına göre kur rejimleri üç ana kategoride toplanır: <span class="blank">________</span>, <span class="blank">________</span> ve <span class="blank">________</span> rejimler.</p>
+        <button class="show-answer" onclick="toggleAnswer(10)">Cevabı Göster</button>
+        <div class="answer" id="answer10">
+            <strong>Cevap:</strong> <span class="fill-answer">sert sabitler</span> - <span class="fill-answer">yumuşak sabitler</span> - <span class="fill-answer">dalgalı</span><br><strong>Açıklama:</strong> IMF, kur rejimlerini esneklik derecelerine göre sınıflandırır. Sert sabitler (hard pegs) en katı olanlardır (örn: para kurulu, dolarizasyon). Yumuşak sabitler (soft pegs) bir miktar esnekliğe izin verir (örn: geleneksel sabit kur, yatay bant). Dalgalı rejimler (floating regimes) ise kurun piyasada belirlendiği sistemlerdir (örn: serbest dalgalanma, müdahaleli dalgalanma).
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

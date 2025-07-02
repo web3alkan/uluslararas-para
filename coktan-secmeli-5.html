@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dış Ödeme Açıkları ve Yapısal Nedenler - Çoktan Seçmeli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options li:hover {
+            background-color: #e0e0e0;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Dış Ödeme Açıkları ve Yapısal Nedenler</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <p>Aşağıdakilerden hangisi dış ödeme açıklarının yapısal nedenlerinden biri değildir?</p>
+        <ul class="options">
+            <li>A) Enerji ithalatına bağımlılık</li>
+            <li>B) Düşük yurtiçi tasarruf oranı</li>
+            <li>C) Geçici döviz kuru dalgalanmaları</li>
+            <li>D) Teknoloji ve ara malı ithalatı</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevabı Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Geçici döviz kuru dalgalanmaları yapısal değil, konjonktürel bir nedendir. Yapısal nedenler ekonominin temel özelliklerinden kaynaklanan kalıcı sorunlardır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <p>Türkiye'nin 1990-2001 döneminde uyguladığı "düşük kur-yüksek faiz" politikasının temel dezavantajı nedir?</p>
+        <ul class="options">
+            <li>A) Enflasyonu artırması</li>
+            <li>B) Ekonominin dış sermayeye bağımlı hale gelmesi</li>
+            <li>C) İhracatın aşırı artması</li>
+            <li>D) Yabancı sermayenin ülkeye gelmemesi</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevabı Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Düşük kur-yüksek faiz politikası, sıcak para girişini teşvik ederek ekonomiyi dış sermayeye bağımlı hale getirmiş ve krizlere açık bir yapı oluşturmuştur.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <p>Gelir-fiyat mekanizmasına göre dış açık durumunda izlenecek politika hangisidir?</p>
+        <ul class="options">
+            <li>A) Harcamaları artırıp vergileri azaltmak</li>
+            <li>B) Harcamaları azaltıp vergileri artırmak</li>
+            <li>C) Para arzını genişletmek</li>
+            <li>D) Döviz kurunu sabitlemek</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevabı Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Gelir-fiyat mekanizmasında, dış açığı kapatmak için daraltıcı maliye politikası uygulanır: kamu harcamaları azaltılır, vergiler artırılır. Bu milli geliri ve ithalatı azaltır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <p>Parasal yaklaşımın diğer yaklaşımlardan temel farkı nedir?</p>
+        <ul class="options">
+            <li>A) Sadece mal ticaretine odaklanması</li>
+            <li>B) Uluslararası sermaye akımlarını dikkate alması</li>
+            <li>C) Döviz kurunu sabitlemesi</li>
+            <li>D) Enflasyonu göz ardı etmesi</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevabı Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Parasal yaklaşım, diğer yaklaşımlardan farklı olarak uluslararası sermaye akımlarını dikkate alır ve ödemeler dengesini para arzı-talebi dengesizliği açısından değerlendirir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <p>J-eğrisi etkisi neyi açıklar?</p>
+        <ul class="options">
+            <li>A) Devalüasyonun dış ticaret dengesine kısa ve uzun vadeli etkilerini</li>
+            <li>B) Enflasyon ve işsizlik ilişkisini</li>
+            <li>C) Faiz oranı ve yatırım ilişkisini</li>
+            <li>D) Para arzı ve fiyat düzeyi ilişkisini</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(5)">Cevabı Göster</button>
+        <div class="answer" id="answer5">
+            <strong>Doğru Cevap: A</strong><br>
+            Açıklama: J-eğrisi, devalüasyon sonrası dış ticaret dengesinin önce kötüleşip (ithalat faturası artar) sonra iyileşmesini (ihracat artışı) gösterir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <p>Marshall-Lerner koşulu neyi ifade eder?</p>
+        <ul class="options">
+            <li>A) Para arzı artışının enflasyona etkisini</li>
+            <li>B) İhracat ve ithalat talep esnekliklerinin toplamının 1'den büyük olması gerektiğini</li>
+            <li>C) Faiz oranlarının denge düzeyini</li>
+            <li>D) Optimal vergi oranını</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(6)">Cevabı Göster</button>
+        <div class="answer" id="answer6">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Marshall-Lerner koşulu, devalüasyonun dış ticaret dengesini iyileştirmesi için ihracat ve ithalat talep esnekliklerinin toplamının 1'den büyük olması gerektiğini belirtir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 7:</h3>
+        <p>Sürdürülemez cari açığın göstergelerinden hangisi yanlıştır?</p>
+        <ul class="options">
+            <li>A) Cari açık/GSYH oranının %5'i aşması</li>
+            <li>B) Kısa vadeli dış borç artışı</li>
+            <li>C) Doğrudan yabancı yatırımlarla finansman</li>
+            <li>D) Rezervlerde hızlı azalma</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(7)">Cevabı Göster</button>
+        <div class="answer" id="answer7">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Doğrudan yabancı yatırımlarla finansman sürdürülebilir bir finansman yöntemidir. Diğer seçenekler sürdürülemez cari açığın göstergeleridir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 8:</h3>
+        <p>Twin deficits (ikiz açık) hipotezi neyi ifade eder?</p>
+        <ul class="options">
+            <li>A) İşsizlik ve enflasyon arasındaki ilişkiyi</li>
+            <li>B) Bütçe açığı ile cari açık arasındaki ilişkiyi</li>
+            <li>C) İhracat ve ithalat arasındaki dengeyi</li>
+            <li>D) Tasarruf ve yatırım eşitliğini</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(8)">Cevabı Göster</button>
+        <div class="answer" id="answer8">
+            <strong>Doğru Cevap: B</strong><br>
+            <strong>Açıklama:</strong> İkiz açık hipotezi, bir ülkenin bütçe açığı ile cari işlemler açığı arasında pozitif bir ilişki olduğunu öne sürer. Temel mantığı şöyledir: Hükümetin bütçe açığı vermesi (harcamalarının gelirlerinden fazla olması), ulusal tasarrufları azaltır. Eğer özel sektörün tasarruf-yatırım dengesi değişmezse, azalan ulusal tasarruflar ülkenin dışarıdan borçlanmasını (sermaye ithal etmesini) gerektirir. Bu da cari açığın artması anlamına gelir. Yani, bütçe açığı cari açığa neden olur.
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

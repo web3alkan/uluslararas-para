@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karma Ara Sistem ve Kur Rejimleri - Çoktan Seçmeli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options li:hover {
+            background-color: #e0e0e0;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Karma Ara Sistem ve Kur Rejimleri</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <p>IMF sınıflandırmasına göre, ulusal para birimi olmayan ve genellikle yabancı para birimini kendi ülke parası gibi benimseyen ülkelerin uyguladığı kur rejimi hangisidir?</p>
+        <ul class="options">
+            <li>A) Serbest dalgalanma</li>
+            <li>B) Para kurulu düzenlemeleri</li>
+            <li>C) Ayrı bir para birimi olmayan kur uygulamaları</li>
+            <li>D) Geleneksel sabit kur sistemi</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevabı Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Ulusal para birimi olmayan ülkeler, yabancı bir para birimini (genellikle dolar veya euro) kendi resmi para birimi olarak kullanırlar. Bu durumda ülke otoriteleri, milli para politikaları üzerindeki denetimlerini terk etmiş olurlar.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <p>Türkiye'nin günümüzde uyguladığı kur rejimi hangisidir?</p>
+        <ul class="options">
+            <li>A) Serbest dalgalanma</li>
+            <li>B) Müdahaleli dalgalanma</li>
+            <li>C) Sabit kur sistemi</li>
+            <li>D) Para kurulu düzenlemeleri</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevabı Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Türkiye müdahaleli dalgalanma sistemini kullanmaktadır. Bu sistemde kur piyasanın işleyişine bırakılmıştır fakat Merkez Bankası zaman zaman alım satım işlemleriyle piyasaya müdahale eder. Amaç, geçici şokları veya aşırı dalgalanmaları önlemektir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <p>Aşağıdakilerden hangisi "yumuşak sabitler" kategorisinde yer almaz?</p>
+        <ul class="options">
+            <li>A) Geleneksel sabit kur sistemi</li>
+            <li>B) Sabit pariteli rejimler</li>
+            <li>C) Para kurulu düzenlemeleri</li>
+            <li>D) Yatay bantlar içinde sabit kur</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevabı Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Para kurulu düzenlemeleri "sert sabitler" kategorisinde yer alır. Yumuşak sabitler, belirli esneklikler içeren sabit kur sistemleridir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <p>Bretton Woods sisteminin yıkılmasından sonra Türkiye hangi kur politikasını uygulamıştır?</p>
+        <ul class="options">
+            <li>A) TL'yi tamamen serbest bırakmıştır</li>
+            <li>B) TL'yi devalüe ederek dolara bağını daha esnek olarak sürdürmüştür</li>
+            <li>C) Euro'ya geçiş yapmıştır</li>
+            <li>D) Altın standardına geçmiştir</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevabı Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Bretton Woods sisteminin 1971-1973 yıllarında yıkılmasının ardından, Türk lirası devalüe edilerek dolara olan bağı daha esnek bir şekilde sürdürülmüştür.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <p>Yönetimli dalgalanma sisteminde aşağıdakilerden hangisi doğrudur?</p>
+        <ul class="options">
+            <li>A) Önceden ilan edilen bir kur hedefi vardır</li>
+            <li>B) MB hiçbir şekilde piyasaya müdahale etmez</li>
+            <li>C) Kurlar piyasaya bırakılmıştır ama MB belirli düzeyde tutmaya çalışır</li>
+            <li>D) Kur tamamen sabittir</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(5)">Cevabı Göster</button>
+        <div class="answer" id="answer5">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Yönetimli dalgalanmada kurlar piyasanın işleyişine bırakılmıştır, fakat Merkez Bankası piyasaya yaptığı müdahalelerle kuru belirli düzeyde tutmaya çalışır. Önceden ilan edilen bir kur hedefi yoktur.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <p>Para kurulu düzenlemelerinin temel özelliği nedir?</p>
+        <ul class="options">
+            <li>A) Kurların tamamen serbest olması</li>
+            <li>B) Ulusal paranın sabit kur üzerinden yabancı paraya dönüşümü ve MB'nin para basma yetkisinin kısıtlanması</li>
+            <li>C) Birden fazla kur sisteminin aynı anda uygulanması</li>
+            <li>D) Altın standardına dönüş</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(6)">Cevabı Göster</button>
+        <div class="answer" id="answer6">
+            <strong>Doğru Cevap: B</strong><br>
+            <strong>Açıklama:</strong> Para kurulu (currency board), sert bir sabit kur rejimidir. Bu sistemde, ulusal paranın tamamının veya belirli bir oranının, sabit bir kur üzerinden yabancı bir para (genellikle dolar veya euro) ile desteklenmesi yasal bir zorunluluktur. Bu durum, Merkez Bankası'nın para basma yetkisini elindeki döviz rezervleriyle sınırlar ve para politikası bağımsızlığını ortadan kaldırır. Genellikle hiperenflasyonla mücadelede bir çıpa olarak kullanılır.
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

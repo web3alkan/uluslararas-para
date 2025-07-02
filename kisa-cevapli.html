@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kısa Cevaplı Sorular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .points {
+            background-color: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+            line-height: 1.6;
+        }
+        .answer ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .answer-lines {
+            border-bottom: 1px solid #ccc;
+            min-height: 20px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Kısa Cevaplı Sorular</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <span class="points">5 Puan</span>
+        <p><strong>Bretton Woods sisteminin temel amacı neydi?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevabı Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Cevap:</strong> Bretton Woods sistemi, II. Dünya Savaşı sonrası uluslararası para sistemini istikrara kavuşturmak, sabit kur rejimi ile ticaretin gelişmesini sağlamak ve ekonomik işbirliğini artırmak amacıyla kurulmuştur.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <span class="points">3 Puan</span>
+        <p><strong>SDR hangi para birimlerinin sepetinden oluşur?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevabı Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Cevap:</strong> SDR sepeti: ABD Doları, Euro, Japon Yeni, İngiliz Sterlini ve Çin Yuanı'ndan oluşur. (2016'da Yuan eklendi)
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <span class="points">4 Puan</span>
+        <p><strong>Triffin Açmazı nedir?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevabı Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Cevap:</strong> Triffin Açmazı, rezerv para ihraç eden ülkenin yaşadığı ikilemdir. Dünya likidite ihtiyacını karşılamak için açık vermeli (güven sorunu), vermezse likidite sıkıntısı yaşanır. Bretton Woods'un yıkılış nedenlerinden biri.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <span class="points">5 Puan</span>
+        <p><strong>Müdahaleli dalgalanma ile yönetimli dalgalanma arasındaki fark nedir?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevabı Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Cevap:</strong> Müdahaleli dalgalanmada MB sadece aşırı volatiliteyi önlemek için müdahale eder, hedef açıklamaz. Yönetimli dalgalanmada ise MB kuru belirli düzeyde tutmaya çalışır ve daha aktif müdahale eder.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <span class="points">6 Puan</span>
+        <p><strong>Para kurulu düzenlemesinin temel özellikleri nelerdir?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(5)">Cevabı Göster</button>
+        <div class="answer" id="answer5">
+            <strong>Cevap:</strong> 
+            <ul>
+                <li>Ulusal paranın sabit kur üzerinden yabancı paraya dönüşümü</li>
+                <li>MB'nin para basma yetkisinin kısıtlanması</li>
+                <li>%100 döviz karşılığı bulundurma zorunluluğu</li>
+                <li>Para politikası bağımsızlığının olmamıaası</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <span class="points">4 Puan</span>
+        <p><strong>Optimal para sahası teorisinin temel koşulları nelerdir?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(6)">Cevabı Göster</button>
+        <div class="answer" id="answer6">
+            <strong>Cevap:</strong> İşgücü mobilitesi, sermaye mobilitesi, fiyat-ücret esnekliği, benzer ekonomik yapı, mali transferler mekanizması, siyasi bütünleşme.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 7:</h3>
+        <span class="points">5 Puan</span>
+        <p><strong>Esneklik yaklaşımında Marshall-Lerner koşulu ne zaman sağlanır?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(7)">Cevabı Göster</button>
+        <div class="answer" id="answer7">
+            <strong>Cevap:</strong> İhracat ve ithalat talep esnekliklerinin toplamı 1'den büyük olduğunda sağlanır. Bu durumda devalüasyon dış ticaret dengesini iyileştirir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 8:</h3>
+        <span class="points">4 Puan</span>
+        <p><strong>Sterilizasyon politikası nedir ve ne zaman uygulanır?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(8)">Cevabı Göster</button>
+        <div class="answer" id="answer8">
+            <strong>Cevap:</strong> MB'nin döviz alımının para arzına etkisini nötralize etmek için tahvil satması. Aşırı sermaye girişi olduğunda ve para arzını kontrol etmek için uygulanır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 9:</h3>
+        <span class="points">6 Puan</span>
+        <p><strong>Dollarizasyon nedir ve ne tür ülkelerde görülür?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(9)">Cevabı Göster</button>
+        <div class="answer" id="answer9">
+            <strong>Cevap:</strong> Bir ülkenin resmi para birimi yerine yabancı para (genellikle dolar) kullanması. Hiperenflasyon yaşayan, politik istikrarsızlık olan ve kendi parasına güven kaybeden ülkelerde görülür. Örnek: Ekvador, Panama.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 10:</h3>
+        <span class="points">5 Puan</span>
+        <p><strong>Twin deficits hipotezi nasıl çalışır?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(10)">Cevabı Göster</button>
+        <div class="answer" id="answer10">
+            <strong>Cevap:</strong> Bütçe açığı → Kamu tasarruf azalır → Toplam tasarruf azalır → Yatırım sabitken tasarruf-yatırım farkı negatif → Cari açık ortaya çıkar. Böylece bütçe açığı cari açığa neden olur.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 11:</h3>
+        <span class="points">4 Puan</span>
+        <p><strong>Sıcak para nedir ve ne tür riskler yaratır?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(11)">Cevabı Göster</button>
+        <div class="answer" id="answer11">
+            <strong>Cevap:</strong> Kısa vadeli kar amaçlı sermaye hareketleri. Ani çıkış riski, varlık fiyatlarında volatilite, döviz kuru istikrarsızlığı ve finansal kriz riski yaratır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 12:</h3>
+        <span class="points">5 Puan</span>
+        <p><strong>Tobin vergisi nedir ve amacı nedir?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(12)">Cevabı Göster</button>
+        <div class="answer" id="answer12">
+            <strong>Cevap:</strong> Döviz işlemlerine konulan düşük oranlı vergi. Kısa vadeli spekülatif sermaye hareketlerini caydırmak, finansal istikrarı sağlamak ve krizleri önlemek amacıyla önerilmiştir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 13:</h3>
+        <span class="points">6 Puan</span>
+        <p><strong>Çin'in kur politikası neden tartışmalıdır?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(13)">Cevabı Göster</button>
+        <div class="answer" id="answer13">
+            <strong>Cevap:</strong> Yuan'ın yapay olarak düşük tutulduğu, bu durumun Çin'e haksız ticaret avantajı sağladığı, diğer ülkelerin ihracatını ve istihdamını olumsuz etkilediği iddia edilmektedir. ABD bu konuda en çok şikayetçi olan ülkedir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 14:</h3>
+        <span class="points">4 Puan</span>
+        <p><strong>Plaza Anlaşması (1985) neydi ve sonuçları neler oldu?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(14)">Cevabı Göster</button>
+        <div class="answer" id="answer14">
+            <strong>Cevap:</strong> G5 ülkeleri arasında doların kontrollü olarak değer kaybetmesi anlaşması. Sonuçta dolar değer kaybetti, yen güçlendi, Japonya'da varlık balonu oluştu ve 1990'larda Japonya uzun durgunluğa girdi.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 15:</h3>
+        <span class="points">5 Puan</span>
+        <p><strong>Blockchain teknolojisi para sistemlerini nasıl etkileyebilir?</strong></p>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <div class="answer-lines"></div>
+        <button class="show-answer" onclick="toggleAnswer(15)">Cevabı Göster</button>
+        <div class="answer" id="answer15">
+            <strong>Cevap:</strong> Blockchain teknolojisi, merkezi olmayan ve dağıtık bir kayıt defteri sistemi sunarak mevcut para sistemlerini kökten değiştirme potansiyeline sahiptir. Olası etkileri şunlardır:
+            <ul>
+                <li><strong>Merkez Bankası Dijital Paraları (CBDC):</strong> Merkez bankaları, blockchain tabanlı kendi dijital paralarını çıkararak para politikasını daha etkin bir şekilde uygulayabilir ve finansal işlemleri doğrudan izleyebilir.</li>
+                <li><strong>Uluslararası Ödemeler:</strong> Sınır ötesi para transferlerini, aracı bankaları (muhabir banka) ortadan kaldırarak daha hızlı, ucuz ve şeffaf hale getirebilir.</li>
+                <li><strong>Finansal Kapsayıcılık:</strong> Bankacılık sistemine erişimi olmayan milyarlarca insana temel finansal hizmetler sunma potansiyeli taşır.</li>
+                <li><strong>Yeni Finansal Araçlar:</strong> Akıllı kontratlar aracılığıyla programlanabilir para ve yeni finansal ürünlerin (DeFi) ortaya çıkmasına olanak tanır.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

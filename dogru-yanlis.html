@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğru/Yanlış Soruları - Tüm Konular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .tf-options {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .tf-options button {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .tf-options button:hover {
+            background-color: #f0f0f0;
+        }
+        .tf-options button.true {
+            border-color: #4CAF50;
+            background-color: #e8f5e9;
+        }
+        .tf-options button.false {
+            border-color: #f44336;
+            background-color: #ffebee;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            display: none;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Doğru/Yanlış Soruları - Tüm Konular</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <p>Bretton Woods sisteminde tüm ülkeler paralarını altına bağlamıştır.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(1, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(1, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer1">
+            <strong>Cevap: Yanlış</strong><br>
+            Açıklama: Bretton Woods sisteminde sadece ABD doları altına bağlıydı, diğer ülkeler paralarını dolara bağlamıştır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <p>SDR (Özel Çekme Hakkı), IMF tarafından yaratılan uluslararası bir rezerv aracıdır.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(2, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(2, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer2">
+            <strong>Cevap: Doğru</strong><br>
+            Açıklama: SDR, uluslararası likiditeyi artırmak için IMF'nin yarattığı uluslararası rezerv aracıdır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <p>Müdahaleli dalgalanma sisteminde Merkez Bankası hiçbir şekilde döviz piyasasına müdahale etmez.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(3, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(3, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer3">
+            <strong>Cevap: Yanlış</strong><br>
+            Açıklama: Müdahaleli dalgalanmada MB zaman zaman alım satım işlemleriyle piyasaya müdahale eder. Amaç aşırı dalgalanmaları önlemektir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <p>Otonom işlemler, ödemeler dengesini düzeltmek amacıyla yapılan işlemlerdir.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(4, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(4, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer4">
+            <strong>Cevap: Yanlış</strong><br>
+            Açıklama: Otonom işlemler, ödemeler dengesi dışındaki nedenlerle (kar amacı, ticaret vb.) gerçekleşen işlemlerdir. Denkleştirici işlemler ödemeler dengesini düzeltmek için yapılır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <p>Euro, 1 Ocak 1999'da kaydi-hesabi para birimi olarak uygulanmaya başlanmıştır.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(5, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(5, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer5">
+            <strong>Cevap: Doğru</strong><br>
+            Açıklama: Euro, 1 Ocak 1999'da kaydi-hesabi olarak başladı, 1 Ocak 2002'de fiziki varlığa kavuştu.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <p>Avrupa kotasyonunda 1 yerli para biriminin kaç yabancı para ettiği gösterilir.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(6, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(6, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer6">
+            <strong>Cevap: Yanlış</strong><br>
+            Açıklama: Avrupa kotasyonunda 1 yabancı para biriminin kaç yerli para ettiği gösterilir. Amerika kotasyonunda 1 yerli paranın kaç yabancı para ettiği gösterilir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 7:</h3>
+        <p>Para kurulu düzenlemeleri genellikle yüksek enflasyonla mücadele amacıyla kullanılır.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(7, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(7, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer7">
+            <strong>Cevap: Doğru</strong><br>
+            Açıklama: Para kurulu düzenlemelerinde MB'nin para basma yetkisi kısıtlanır ve genelde yüksek enflasyonla mücadele amacıyla başvurulur.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 8:</h3>
+        <p>Türkiye 1990 yılında IMF'e başvurarak Madde 8 statüsünü kabul etmiş ve TL konvertibl hale gelmiştir.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(8, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(8, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer8">
+            <strong>Cevap: Doğru</strong><br>
+            Açıklama: Türkiye 1990'da IMF Madde 8 statüsünü kabul ederek TL'nin konvertibl (dönüştürülebilir) olmasını sağlamıştır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 9:</h3>
+        <p>Devalüasyon, ulusal paranın değer kazanması anlamına gelir.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(9, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(9, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer9">
+            <strong>Cevap: Yanlış</strong><br>
+            Açıklama: Devalüasyon, ulusal paranın değer kaybetmesidir. Revalüasyon ise ulusal paranın değer kazanmasıdır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 10:</h3>
+        <p>IMF kotaları, üye ülkelerin oylama gücünü ve SDR dağıtımını belirler.</p>
+        <div class="tf-options">
+            <button onclick="checkAnswer(10, false)" class="false">Yanlış</button>
+            <button onclick="checkAnswer(10, true)" class="true">Doğru</button>
+        </div>
+        <div class="answer" id="answer10">
+            <strong>Cevap: Doğru</strong><br>
+            <strong>Açıklama:</strong> Bir ülkenin IMF'deki kotası, o ülkenin fona yaptığı mali katkıyı, fondan alabileceği borç limitini ve en önemlisi Yönetim Kurulu'ndaki oy gücünü belirler. Ayrıca, IMF'nin periyodik olarak yarattığı ve üyelere dağıttığı SDR (Özel Çekme Hakkı) tahsisatları da ülkelerin kotaları oranında yapılır. Dolayısıyla kota, bir ülkenin fondaki ağırlığını ve haklarını belirleyen temel unsurdur.
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(num, userAnswer) {
+            var answer = document.getElementById('answer' + num);
+            answer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

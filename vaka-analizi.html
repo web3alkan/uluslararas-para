@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaka Analizi Soruları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .case {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .case h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .scenario {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #2196F3;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .data-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .questions {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+            line-height: 1.6;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Vaka Analizi Soruları</h1>
+
+    <div class="case">
+        <h3>Vaka 1: Gelişmekte Olan Ülke X'in Döviz Krizi</h3>
+        <div class="scenario">
+            <p><strong>Senaryo:</strong> Gelişmekte olan X ülkesi, son 3 yıldır yüksek büyüme oranları kaydetmektedir. Ancak bu büyüme büyük ölçüde kısa vadeli sermaye girişleriyle finanse edilmektedir. Ülkenin ekonomik göstergeleri aşağıdaki gibidir:</p>
+            
+            <table class="data-table">
+                <tr>
+                    <th>Gösterge</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                </tr>
+                <tr>
+                    <td>Büyüme Oranı (%)</td>
+                    <td>7.2</td>
+                    <td>6.8</td>
+                    <td>5.5</td>
+                </tr>
+                <tr>
+                    <td>Cari Açık/GSYH (%)</td>
+                    <td>-3.5</td>
+                    <td>-5.2</td>
+                    <td>-7.8</td>
+                </tr>
+                <tr>
+                    <td>Enflasyon (%)</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Kısa Vadeli Dış Borç/Rezervler</td>
+                    <td>0.8</td>
+                    <td>1.2</td>
+                    <td>1.8</td>
+                </tr>
+                <tr>
+                    <td>Reel Kur Endeksi (2020=100)</td>
+                    <td>105</td>
+                    <td>112</td>
+                    <td>120</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="questions">
+            <p><strong>Sorular:</strong></p>
+            <ol>
+                <li>X ülkesinin karşılaştığı temel makroekonomik sorunları belirleyiniz.</li>
+                <li>Bu göstergeler ışığında muhtemel bir döviz krizinin sinyallerini açıklayınız.</li>
+                <li>Merkez bankasının ve hükümetin alabileceği önlemleri değerlendiriniz.</li>
+                <li>IMF'ye başvurulması durumunda uygulanacak muhtemel program koşullarını tartışınız.</li>
+            </ol>
+        </div>
+        
+        <button class="show-answer" onclick="toggleAnswer(1)">Örnek Analizi Göster</button>
+        <div class="answer" id="answer1">
+            <h4>1. Temel Makroekonomik Sorunlar:</h4>
+            <ul>
+                <li>Sürdürülemez cari açık (GSYH'nin %7.8'i kritik eşiğin üzerinde)</li>
+                <li>Hızla artan enflasyon (%25)</li>
+                <li>Reel kurun aşırı değerlenmesi (%20 değerlenme)</li>
+                <li>Kısa vadeli dış borçların rezervleri aşması (1.8 kat)</li>
+                <li>Büyüme hızında yavaşlama trendi</li>
+            </ul>
+            
+            <h4>2. Döviz Krizi Sinyalleri:</h4>
+            <ul>
+                <li>Kısa vadeli borç/rezerv oranının kritik seviyeyi aşması</li>
+                <li>Cari açığın finansman kalitesinin düşmesi</li>
+                <li>Reel kurun değerlenmesiyle rekabet gücü kaybı</li>
+                <li>Sıcak para çıkışı riski</li>
+                <li>Spekülatif atak olasılığı</li>
+            </ul>
+            
+            <h4>3. Alınabilecek Önlemler:</h4>
+            <p><strong>Merkez Bankası:</strong></p>
+            <ul>
+                <li>Faiz oranlarını artırma</li>
+                <li>Zorunlu karşılıkları yükseltme</li>
+                <li>Döviz rezervlerini güçlendirme</li>
+                <li>Swap anlaşmaları yapma</li>
+            </ul>
+            <p><strong>Hükümet:</strong></p>
+            <ul>
+                <li>Mali disiplin sağlama</li>
+                <li>Yapısal reformlar</li>
+                <li>İhracatı teşvik</li>
+                <li>İthalat kısıtlamaları</li>
+            </ul>
+            
+            <h4>4. IMF Program Koşulları:</h4>
+            <ul>
+                <li>Sıkı para ve maliye politikası</li>
+                <li>Dalgalı kura geçiş</li>
+                <li>Bankacılık sektörü reformu</li>
+                <li>Kamu harcamalarında kesinti</li>
+                <li>Özelleştirme programı</li>
+                <li>Enflasyon hedeflemesi</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="case">
+        <h3>Vaka 2: Euro Bölgesi Ülkesi Y'nin Rekabet Gücü Sorunu</h3>
+        <div class="scenario">
+            <p><strong>Senaryo:</strong> Euro bölgesi üyesi Y ülkesi, ortak para birimini kullandığı için devalüasyon yapamamaktadır. Almanya'ya göre birim işgücü maliyetleri %30 daha yüksektir ve dış ticaret açığı büyümektedir.</p>
+            
+            <table class="data-table">
+                <tr>
+                    <th>Gösterge</th>
+                    <th>Y Ülkesi</th>
+                    <th>Almanya</th>
+                </tr>
+                <tr>
+                    <td>Birim İşgücü Maliyeti Endeksi</td>
+                    <td>130</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>İşsizlik Oranı (%)</td>
+                    <td>15</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Dış Ticaret Dengesi/GSYH (%)</td>
+                    <td>-4</td>
+                    <td>+7</td>
+                </tr>
+                <tr>
+                    <td>Kamu Borcu/GSYH (%)</td>
+                    <td>120</td>
+                    <td>60</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="questions">
+            <p><strong>Sorular:</strong></p>
+            <ol>
+                <li>Y ülkesinin Euro bölgesinde yaşadığı temel sorunları analiz ediniz.</li>
+                <li>Devalüasyon yapamayan bir ülkenin rekabet gücünü artırma yollarını tartışınız.</li>
+                <li>"İç devalüasyon" politikasının avantaj ve dezavantajlarını değerlendiriniz.</li>
+                <li>Euro bölgesinin optimal para sahası olup olmadığını bu vaka üzerinden tartışınız.</li>
+            </ol>
+        </div>
+        
+        <button class="show-answer" onclick="toggleAnswer(2)">Örnek Analizi Göster</button>
+        <div class="answer" id="answer2">
+            <h4>1. Y Ülkesinin Temel Sorunları:</h4>
+            <ul>
+                <li>Rekabet gücü kaybı (yüksek birim maliyetler)</li>
+                <li>Para politikası bağımsızlığının olmaması</li>
+                <li>Yüksek işsizlik ve düşük büyüme</li>
+                <li>Kronik dış ticaret açığı</li>
+                <li>Yüksek kamu borcu</li>
+            </ul>
+            
+            <h4>2. Rekabet Gücünü Artırma Yolları:</h4>
+            <ul>
+                <li>Verimlilik artırıcı yapısal reformlar</li>
+                <li>İşgücü piyasası esnekliği</li>
+                <li>Teknoloji ve inovasyon yatırımları</li>
+                <li>Eğitim ve beşeri sermaye</li>
+                <li>Bürokrasinin azaltılması</li>
+            </ul>
+            
+            <h4>3. İç Devalüasyon Politikası:</h4>
+            <p><strong>Avantajları:</strong></p>
+            <ul>
+                <li>Fiyat rekabeti sağlama</li>
+                <li>Euro bölgesinde kalarak uyum</li>
+                <li>Uzun vadeli verimlilik artışı</li>
+            </ul>
+            <p><strong>Dezavantajları:</strong></p>
+            <ul>
+                <li>Sosyal maliyeti yüksek</li>
+                <li>Deflasyon riski</li>
+                <li>İç talep daralması</li>
+                <li>Politik dirençle karşılaşma</li>
+            </ul>
+            
+            <h4>4. Optimal Para Sahası Değerlendirmesi:</h4>
+            <ul>
+                <li>Asimetrik şoklar karşısında uyum zorluğu</li>
+                <li>İşgücü mobilitesinin düşüklüğü</li>
+                <li>Mali transferlerin yetersizliği</li>
+                <li>Ekonomik yapı farklılıkları</li>
+                <li>Sonuç: Euro bölgesi tam optimal para sahası değil</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="case">
+        <h3>Vaka 3: Petrol İhracatçısı Z Ülkesinin Dış Ödeme Dengesi</h3>
+        <div class="scenario">
+            <p><strong>Senaryo:</strong> Z ülkesi, ihracatının %80'ini petrol oluşturan bir ekonomidir. 2022'de petrol fiyatları 100$/varil iken, 2023'te 60$/varil'e düşmüştür. Ülke sabit kur rejimi uygulamaktadır.</p>
+            
+            <table class="data-table">
+                <tr>
+                    <th>Gösterge</th>
+                    <th>2022 (Petrol: 100$)</th>
+                    <th>2023 (Petrol: 60$)</th>
+                </tr>
+                <tr>
+                    <td>İhracat Gelirleri (Milyar $)</td>
+                    <td>80</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>Cari Denge (Milyar $)</td>
+                    <td>+15</td>
+                    <td>-17</td>
+                </tr>
+                <tr>
+                    <td>Döviz Rezervleri (Milyar $)</td>
+                    <td>120</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Bütçe Dengesi/GSYH (%)</td>
+                    <td>+3</td>
+                    <td>-8</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="questions">
+            <p><strong>Sorular:</strong></p>
+            <ol>
+                <li>Petrol fiyatlarındaki düşüşün Z ülkesi ekonomisine etkilerini analiz ediniz.</li>
+                <li>Sabit kur sisteminin bu durumda sürdürülebilirliğini değerlendiriniz.</li>
+                <li>Ülkenin ekonomik çeşitlendirme stratejilerini tartışınız.</li>
+                <li>Petrol fonları ve istikrar mekanizmalarının önemini açıklayınız.</li>
+            </ol>
+        </div>
+        
+        <button class="show-answer" onclick="toggleAnswer(3)">Örnek Analizi Göster</button>
+        <div class="answer" id="answer3">
+            <h4>1. Petrol Fiyat Düşüşünün Etkileri:</h4>
+            <p>Petrol fiyatlarındaki %40'lık düşüş, ihracatının %80'i petrole dayalı olan Z ülkesi ekonomisinde çok ciddi bir dış şok yaratmıştır. Etkileri şunlardır:</p>
+            <ul>
+                <li><strong>Ticaret ve Cari Denge Şoku:</strong> İhracat gelirleri 32 milyar dolar (%40) azalmıştır. Bu durum, 15 milyar dolar cari fazlası veren ekonomiyi, bir yıl içinde 17 milyar dolar cari açık veren bir duruma sokmuştur. Bu, GSYH'nin yaklaşık %10-15'ine denk gelebilecek devasa bir bozulmadır.</li>
+                <li><strong>Bütçe Krizi (İkiz Açık):</strong> Petrol ihracatından elde edilen gelirler aynı zamanda kamu gelirlerinin de önemli bir kaynağıdır. Bu gelirlerin düşmesi, bütçe fazlasını büyük bir bütçe açığına dönüştürmüştür. Bu, tipik bir "ikiz açık" (bütçe açığı ve cari açık) senaryosudur.</li>
+                <li><strong>Rezerv Erimesi:</strong> Sabit kur rejimini sürdürme çabası ve oluşan cari açığın finansmanı, ülkenin döviz rezervlerinin bir yılda 35 milyar dolar (%29) erimesine neden olmuştur. Bu hızda bir kayıp sürdürülemez.</li>
+            </ul>
+            
+            <h4>2. Sabit Kur Sisteminin Sürdürülebilirliği:</h4>
+            <p>Mevcut koşullarda sabit kur sistemini sürdürmek neredeyse imkansızdır ve son derece risklidir:</p>
+            <ul>
+                <li><strong>Sürdürülemez Rezerv Kaybı:</strong> Bu hızla devam ederse, ülkenin rezervleri 2-3 yıl içinde tamamen tükenebilir.</li>
+                <li><strong>Spekülatif Atak Riski:</strong> Rezervlerin hızla eridiğini gören piyasa aktörleri, ülkenin eninde sonunda devalüasyon yapmak zorunda kalacağını anlarlar. Bu beklenti, ülkenin parasına karşı büyük bir spekülatif atak başlatır ve bu da krizi hızlandırır.</li>
+                <li><strong>Politika Seçenekleri:</strong> Ülke ya acı verici bir iç devalüasyon (ücret ve harcamaları kısmak) politikası izlemeli, ya da daha kontrollü bir şekilde kur rejimini değiştirmelidir. Sabit kurda ısrar etmek, ani ve kaotik bir çöküşe yol açabilir. Olası bir çözüm, para birimini bir sepet veya banda bağlayarak daha esnek bir rejime geçmek olabilir.</li>
+            </ul>
+            
+            <h4>3. Ekonomik Çeşitlendirme Stratejileri:</h4>
+            <p>Bu kriz, ülkenin petrole olan aşırı bağımlılığının ne kadar riskli olduğunu göstermektedir. Uzun vadede yapılması gerekenler:</p>
+            <ul>
+                <li><strong>Petrol Dışı Sektörlere Yatırım:</strong> Petrol gelirlerinin bir kısmını kullanarak turizm, yenilenebilir enerji, teknoloji, tarım ve imalat sanayi gibi yeni büyüme motorları yaratmak.</li>
+                <li><strong>Beşeri Sermayeyi Güçlendirmek:</strong> Eğitim sistemini reforme ederek ve inovasyonu teşvik ederek daha bilgili ve yetenekli bir işgücü oluşturmak.</li>
+                <li><strong>İş Ortamını İyileştirmek:</strong> Bürokrasiyi azaltarak, yasal altyapıyı güçlendirerek ve yabancı yatırımcılar için cazip bir ortam yaratarak özel sektörün gelişimini teşvik etmek.</li>
+            </ul>
+            
+            <h4>4. Petrol Fonları ve İstikrar Mekanizmalarının Önemi:</h4>
+            <p>Bu tür şokların etkisini azaltmak için "Hollanda hastalığı"na karşı önlemler almak kritik öneme sahiptir:</p>
+            <ul>
+                <li><strong>Ulusal Varlık Fonu (Petrol Fonu):</strong> Petrol gelirlerinin tamamını bütçeye aktarmak yerine, bir kısmının (özellikle fiyatların yüksek olduğu dönemlerde) Norveç veya Abu Dabi'deki gibi bir ulusal varlık fonunda biriktirilmesi. Bu fon, hem gelecek nesiller için bir tasarruf sağlar hem de fiyatların düştüğü dönemlerde ekonomiyi desteklemek için bir tampon görevi görür.</li>
+                <li><strong>Bütçe Kuralları:</strong> Petrol fiyatlarının belirli bir seviyenin üzerindeki kısmından elde edilen gelirin doğrudan harcanmasını engelleyen mali kurallar benimsemek. Bu, kamu harcamalarının petrol fiyatlarındaki oynaklığa göre artıp azalmasını engelleyerek mali disiplin sağlar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

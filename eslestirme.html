@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eşleştirme Soruları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .matching-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .matching-section h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .matching-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .column {
+            width: 45%;
+        }
+        .column h4 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 0 0 10px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .item {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .answer-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Eşleştirme Soruları - Kavram ve Tanım Eşleştirmeleri</h1>
+
+    <div class="matching-section">
+        <h3>Eşleştirme 1: Kur Sistemleri</h3>
+        <p>Aşağıdaki kur sistemlerini tanımlarıyla eşleştiriniz:</p>
+        <div class="matching-container">
+            <div class="column">
+                <h4>Kur Sistemleri</h4>
+                <div class="item">A) Serbest Dalgalanma</div>
+                <div class="item">B) Müdahaleli Dalgalanma</div>
+                <div class="item">C) Para Kurulu</div>
+                <div class="item">D) Geleneksel Sabit Kur</div>
+                <div class="item">E) Yönetimli Dalgalanma</div>
+            </div>
+            <div class="column">
+                <h4>Tanımlar</h4>
+                <div class="item">1) MB'nin para basma yetkisinin kısıtlandığı sistem</div>
+                <div class="item">2) Kurun tamamen piyasa güçlerine bırakıldığı sistem</div>
+                <div class="item">3) MB'nin aşırı dalgalanmaları önlemek için müdahale ettiği sistem</div>
+                <div class="item">4) Ulusal paranın ±%1 bant içinde tutulduğu sistem</div>
+                <div class="item">5) MB'nin belirli düzeyde tutmaya çalıştığı ama hedef açıklamadığı sistem</div>
+            </div>
+        </div>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevapları Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Doğru Eşleşmeler:</strong>
+            <div class="answer-item">A - 2: Serbest Dalgalanma - Kurun tamamen piyasa güçlerine bırakıldığı sistem</div>
+            <div class="answer-item">B - 3: Müdahaleli Dalgalanma - MB'nin aşırı dalgalanmaları önlemek için müdahale ettiği sistem</div>
+            <div class="answer-item">C - 1: Para Kurulu - MB'nin para basma yetkisinin kısıtlandığı sistem</div>
+            <div class="answer-item">D - 4: Geleneksel Sabit Kur - Ulusal paranın ±%1 bant içinde tutulduğu sistem</div>
+            <div class="answer-item">E - 5: Yönetimli Dalgalanma - MB'nin belirli düzeyde tutmaya çalıştığı ama hedef açıklamadığı sistem</div>
+        </div>
+    </div>
+
+    <div class="matching-section">
+        <h3>Eşleştirme 2: Uluslararası Likidite Kavramları</h3>
+        <p>Aşağıdaki kavramları açıklamalarıyla eşleştiriniz:</p>
+        <div class="matching-container">
+            <div class="column">
+                <h4>Kavramlar</h4>
+                <div class="item">A) SDR</div>
+                <div class="item">B) IMF Kotası</div>
+                <div class="item">C) Uluslararası Likidite</div>
+                <div class="item">D) Rezerv Para</div>
+                <div class="item">E) Altın Rezervi</div>
+            </div>
+            <div class="column">
+                <h4>Açıklamalar</h4>
+                <div class="item">1) Uluslararası ödemelerde kullanılan varlıklar</div>
+                <div class="item">2) IMF'nin yarattığı uluslararası rezerv aracı</div>
+                <div class="item">3) Üye ülkelerin IMF'deki oylama gücünü belirleyen</div>
+                <div class="item">4) Uluslararası ticarette yaygın kabul gören para birimi</div>
+                <div class="item">5) MB'lerin değer saklama aracı olarak tuttukları kıymetli maden</div>
+            </div>
+        </div>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevapları Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Doğru Eşleşmeler:</strong>
+            <div class="answer-item">A - 2: SDR - IMF'nin yarattığı uluslararası rezerv aracı</div>
+            <div class="answer-item">B - 3: IMF Kotası - Üye ülkelerin IMF'deki oylama gücünü belirleyen</div>
+            <div class="answer-item">C - 1: Uluslararası Likidite - Uluslararası ödemelerde kullanılan varlıklar</div>
+            <div class="answer-item">D - 4: Rezerv Para - Uluslararası ticarette yaygın kabul gören para birimi</div>
+            <div class="answer-item">E - 5: Altın Rezervi - MB'lerin değer saklama aracı olarak tuttukları kıymetli maden</div>
+        </div>
+    </div>
+
+    <div class="matching-section">
+        <h3>Eşleştirme 3: Ödemeler Dengesi İşlemleri</h3>
+        <p>Aşağıdaki işlem türlerini örnekleriyle eşleştiriniz:</p>
+        <div class="matching-container">
+            <div class="column">
+                <h4>İşlem Türleri</h4>
+                <div class="item">A) Otonom İşlem</div>
+                <div class="item">B) Denkleştirici İşlem</div>
+                <div class="item">C) Cari İşlem</div>
+                <div class="item">D) Sermaye İşlemi</div>
+                <div class="item">E) Resmi Rezerv İşlemi</div>
+            </div>
+            <div class="column">
+                <h4>Örnekler</h4>
+                <div class="item">1) İhracat ve ithalat</div>
+                <div class="item">2) MB'nin döviz rezerv kullanımı</div>
+                <div class="item">3) Kar amacıyla yapılan yabancı yatırım</div>
+                <div class="item">4) IMF kredisi kullanımı</div>
+                <div class="item">5) Doğrudan yabancı sermaye yatırımı</div>
+            </div>
+        </div>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevapları Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Doğru Eşleşmeler:</strong>
+            <div class="answer-item">A - 3: Otonom İşlem - Kar amacıyla yapılan yabancı yatırım</div>
+            <div class="answer-item">B - 4: Denkleştirici İşlem - IMF kredisi kullanımı</div>
+            <div class="answer-item">C - 1: Cari İşlem - İhracat ve ithalat</div>
+            <div class="answer-item">D - 5: Sermaye İşlemi - Doğrudan yabancı sermaye yatırımı</div>
+            <div class="answer-item">E - 2: Resmi Rezerv İşlemi - MB'nin döviz rezerv kullanımı</div>
+        </div>
+    </div>
+
+    <div class="matching-section">
+        <h3>Eşleştirme 4: Para Politikası Etkileri</h3>
+        <p>Aşağıdaki durumları sonuçlarıyla eşleştiriniz:</p>
+        <div class="matching-container">
+            <div class="column">
+                <h4>Durumlar</h4>
+                <div class="item">A) Devalüasyon</div>
+                <div class="item">B) Revalüasyon</div>
+                <div class="item">C) Yüksek Faiz Politikası</div>
+                <div class="item">D) Düşük Kur Politikası</div>
+                <div class="item">E) Daraltıcı Para Politikası</div>
+            </div>
+            <div class="column">
+                <h4>Sonuçlar</h4>
+                <div class="item">1) İhracat azalır, ithalat artar</div>
+                <div class="item">2) İhracat artar, ithalat azalır</div>
+                <div class="item">3) Yabancı sermaye girişi artar</div>
+                <div class="item">4) İthalatı özendirici etki</div>
+                <div class="item">5) Milli gelir ve ithalat azalır</div>
+            </div>
+        </div>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevapları Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Doğru Eşleşmeler ve Açıklamaları:</strong>
+            <div class="answer-item"><strong>A - 2:</strong> Devalüasyon, ulusal paranın değerinin düşürülmesidir. Bu, ülkenin ihraç ürünlerini yabancılar için ucuzlatır (ihracat artar) ve ithal ürünleri yerli halk için pahalılaştırır (ithalat azalır).</div>
+            <div class="answer-item"><strong>B - 1:</strong> Revalüasyon, devalüasyonun tersidir; ulusal paranın değeri artırılır. Bu durum ihraç ürünlerini pahalılaştırarak ihracatı azaltır ve ithal ürünleri ucuzlatarak ithalatı artırır.</div>
+            <div class="answer-item"><strong>C - 3:</strong> Yüksek faiz politikası, ülkedeki finansal varlıkların getirisini artırır. Bu durum, daha yüksek getiri arayışındaki kısa vadeli yabancı sermayeyi (sıcak para) ülkeye çeker.</div>
+            <div class="answer-item"><strong>D - 4:</strong> Düşük kur politikası, ulusal paranın yapay olarak değerli tutulmasıdır. Bu, yabancı malların fiyatını yerli para cinsinden ucuzlatır ve dolayısıyla ithalatı teşvik edici bir etki yaratır.</div>
+            <div class="answer-item"><strong>E - 5:</strong> Daraltıcı para politikası (faiz artırımı, para arzının kısılması), ekonomideki toplam talebi düşürür. Toplam talebin düşmesi hem genel olarak ekonomik aktiviteyi (milli gelir) hem de ithalat talebini azaltır.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

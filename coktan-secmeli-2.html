@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uluslararası Likidite Araçları - Çoktan Seçmeli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options li:hover {
+            background-color: #e0e0e0;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    <h1>Uluslararası Likidite Araçları</h1>
+
+    <div class="question">
+        <h3>Soru 1:</h3>
+        <p>Uluslararası likidite nedir?</p>
+        <ul class="options">
+            <li>A) Sadece altın rezervleri</li>
+            <li>B) Uluslararası ödemelerde kullanılan varlıklar</li>
+            <li>C) Sadece ABD doları</li>
+            <li>D) Ülkelerin iç borçları</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(1)">Cevabı Göster</button>
+        <div class="answer" id="answer1">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Uluslararası likidite, uluslararası ödemelerde kullanılan varlıklara denir. Tüm ülkelerin tuttukları dış rezervlerin toplamı uluslararası likiditeyi oluşturur.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 2:</h3>
+        <p>SDR (Special Drawing Rights) nedir?</p>
+        <ul class="options">
+            <li>A) Bir ülkenin iç borcu</li>
+            <li>B) IMF'nin yarattığı uluslararası rezerv aracı</li>
+            <li>C) Avrupa Birliği'nin para birimi</li>
+            <li>D) Altın standardı</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(2)">Cevabı Göster</button>
+        <div class="answer" id="answer2">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: SDR (Özel Çekme Hakkı), uluslararası likiditeyi artırmak için IMF'nin yarattığı uluslararası rezerv aracıdır. Bir ülkenin, diğer ülkelerin merkez bankalarından ulusal parasını çekme hakkıdır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 3:</h3>
+        <p>Aşağıdakilerden hangisi uluslararası likidite araçlarından biri değildir?</p>
+        <ul class="options">
+            <li>A) ABD Doları</li>
+            <li>B) Euro</li>
+            <li>C) Şirket tahvilleri</li>
+            <li>D) Altın</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(3)">Cevabı Göster</button>
+        <div class="answer" id="answer3">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Uluslararası likidite araçları: Dolar, büyük sanayileşmiş ülke paraları (Euro), IMF kaynakları (SDR, döviz rezerv pozisyonu) ve Altın'dır. Şirket tahvilleri uluslararası likidite aracı değildir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 4:</h3>
+        <p>Uluslararası likiditenin gerekli artış oranını belirleyen faktörlerden hangisi yanlıştır?</p>
+        <ul class="options">
+            <li>A) Dış ticaret ve mal alımların büyüme hızı</li>
+            <li>B) Dış rezerv tutma maliyeti</li>
+            <li>C) Ülkenin nüfus artış hızı</li>
+            <li>D) Ülkenin kur rejiminin sabit ya da değişken olması</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(4)">Cevabı Göster</button>
+        <div class="answer" id="answer4">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: Uluslararası likiditenin gerekli artış oranını belirleyen faktörler: dış ticaret büyüme hızı, dış rezerv tutma maliyeti, rezerv araçlarına ulaşma kolaylığı ve kur rejimidir. Nüfus artış hızı doğrudan bir faktör değildir.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 5:</h3>
+        <p>IMF kotalarının belirlediği unsurlardan hangisi yanlıştır?</p>
+        <ul class="options">
+            <li>A) Üyelerin IMF'ye yapacağı mali katkıları</li>
+            <li>B) IMF'nin yönetimindeki ağırlıkları (oylama gücü)</li>
+            <li>C) Ülkelerin askeri güçleri</li>
+            <li>D) Yeni yaratılan SDR'lerin dağıtımı</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(5)">Cevabı Göster</button>
+        <div class="answer" id="answer5">
+            <strong>Doğru Cevap: C</strong><br>
+            Açıklama: IMF kotaları; üyelerin IMF'ye yapacağı mali katkıları, IMF yönetimindeki ağırlıklarını (oylama ve temsil gücü), fonların sağlanmasını ve yeni yaratılan SDR'lerin dağıtımını belirler. Askeri güç kota belirlenmesinde rol oynamaz.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 6:</h3>
+        <p>Merkez bankalarının rezervlerinin bir bölümünü hala altında tutmalarının nedeni nedir?</p>
+        <ul class="options">
+            <li>A) Altının endüstriyel kullanımı</li>
+            <li>B) Altının dövize göre daha fazla prim yapacağı beklentisi</li>
+            <li>C) IMF zorunluluğu</li>
+            <li>D) Altının taşıma kolaylığı</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(6)">Cevabı Göster</button>
+        <div class="answer" id="answer6">
+            <strong>Doğru Cevap: B</strong><br>
+            Açıklama: Günümüzde hala merkez bankaları rezervlerinin bir bölümünü altında tutuyor çünkü altının dövize göre daha fazla prim yapacağı ya da daha az değer kaybına uğrayacağı yönündeki beklentiler vardır.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Soru 7:</h3>
+        <p>Uluslararası resmi rezervlerin döviz bileşenlerinde yer almayan para birimi hangisidir?</p>
+        <ul class="options">
+            <li>A) ABD Doları</li>
+            <li>B) Euro</li>
+            <li>C) Türk Lirası</li>
+            <li>D) Japon Yeni</li>
+        </ul>
+        <button class="show-answer" onclick="toggleAnswer(7)">Cevabı Göster</button>
+        <div class="answer" id="answer7">
+            <strong>Doğru Cevap: C</strong><br>
+            <strong>Açıklama:</strong> Uluslararası resmi rezervler, genellikle istikrarlı, konvertibilitesi yüksek ve uluslararası ticarette yaygın olarak kullanılan para birimlerinden oluşur. Bunlar "rezerv para" olarak adlandırılır. IMF'nin verilerine göre başlıca rezerv paralar; ABD Doları, Euro, Japon Yeni, İngiliz Sterlini, Çin Yuanı, Kanada Doları, Avustralya Doları ve İsviçre Frangı'dır. Türk Lirası, bu statüde bir para birimi değildir.
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
